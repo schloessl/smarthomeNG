@@ -23,12 +23,14 @@ Im folgenden sind etwaige Anforderungen und unterstützte Hardware beschrieben. 
 
 Es handelt sich bei diesem Plugin um ein **interface Plugin**.
 
+**ACHTUNG**: Dieses Plugin ist als deprecated gekennzeichnet. Es wird empfohlen auf eine                  Nachfolgelösung umzusteigen.
+
 
 
 Beschreibung
 ============
 
-Steuerung von diversen AV Geräten über TCP/IP und RS232 Schnittstelle. Das Plugin unterstützt eine Vielzahl von AV-Geräten und wurde mit folgenden Geräten getestet: - Pioneer AV Receiver < 2016 - Denon AV Receiver > 2016 - Epson Projektor < 2010 - Oppo UHD Player
+Steuerung eines AV Gerätes über TCP/IP oder RS232 Schnittstelle. Das Plugin unterstützt eine Vielzahl von AV-Geräten und wurde mit folgenden Geräten getestet: - Pioneer AV Receiver < 2016 - Denon AV Receiver > 2016 - Epson Projektor < 2010 - Oppo UHD Player Zu diesen Geräten gibt es eigene neue Plugins, die auf dem SmartDevice Framework aufbauen.
 
 
 Anforderungen
@@ -309,26 +311,6 @@ Caller, bei denen kein Itemupdate vollzogen werden soll. Dies ist hilfreich, um 
  - Datentyp: **str**
 
 
-webif_pagelength
-================
-
-
-Anzahl an Items, die standardmäßig in einer Web Interface Tabelle pro Seite angezeigt werden.
-Bei 0 wird die Tabelle automatisch an die Höhe des Browserfensters angepasst.
-Bei -1 werden alle Tabelleneinträge auf einer Seite angezeigt.
-
- - Datentyp: **int**
- - Standardwert: **0**
-
- - Mögliche Werte:
-
-   - **-1**
-   - **0**
-   - **25**
-   - **50**
-   - **100**
-
-
 ==============
 Item Attribute
 ==============
@@ -571,4 +553,4 @@ Das Plugin verfügt über folgende öffentliche Funktionen, die z.B. in Logiken 
 
 **Keine**
 
-.. [#f1] Diese Seite wurde aus den Metadaten des Plugins erzeugt. Für den Fall, dass diese Seite nicht alle benötigten Informationen enthält, bitte auf die englischsprachige :doc:`README Datei <../../plugins/avdevice/README>` des Plugins zugreifen.
+.. [#f1] Diese Seite wurde aus den Metadaten des Plugins erzeugt.

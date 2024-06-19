@@ -36,11 +36,6 @@ Anforderungen
 =============
 
 
-Das Plugin benötigt die folgende Software:
-
- - libatlas-base-dev: Zumindest auf einem Raspberry Pi mit Debian Stretch ist der Befehl nötig: ``sudo apt install libatlas-base-dev``
- - Bei neueren SciPy Versionen kann auf einem Raspi der Build trotzdem scheitern. Es ist dann empfohlen, die aktuellste passende Datei (armv6 = Raspi1, armv7 = Rest) von hier herunterzuladen und ``pip3 install scipy*.whl`` zu starten: https://www.piwheels.org/simple/scipy/
- - Python Modul scipy: ``pip3 install scipy``. Es wird empfohlen, zuerst die Pythonmodule zu aktualisieren, aber unbedingt darauf zu achten, dass die Requirements von SmarthomeNG erfüllt bleiben! Sollte die Installation via pip nicht funktionieren: ``sudo apt update && sudo apt install -y python3-scipy``
 
 
  - Minimum SmartHomeNG Version: **1.6**
@@ -128,26 +123,6 @@ Cron-Angabe, wann für die UZSU Einträge mit Sonnenstandbezug die errechnete Uh
 
  - Datentyp: **str**
  - Standardwert: **0 0 * ***
-
-
-webif_pagelength
-================
-
-
-Anzahl an Items, die standardmäßig in einer Web Interface Tabelle pro Seite angezeigt werden.
-Bei 0 wird die Tabelle automatisch an die Höhe des Browserfensters angepasst.
-Bei -1 werden alle Tabelleneinträge auf einer Seite angezeigt.
-
- - Datentyp: **int**
- - Standardwert: **100**
-
- - Mögliche Werte:
-
-   - **-1**
-   - **0**
-   - **25**
-   - **50**
-   - **100**
 
 
 ==============
@@ -286,4 +261,4 @@ Fortsetzen der UZSU Evaluierung: Aktivieren des Items und Setzen des zuletzt fes
  - Ergebnistyp der Funktion: **foo**
 
 
-.. [#f1] Diese Seite wurde aus den Metadaten des Plugins erzeugt. Für den Fall, dass diese Seite nicht alle benötigten Informationen enthält, bitte auf die englischsprachige :doc:`README Datei <../../plugins/uzsu/README>` des Plugins zugreifen.
+.. [#f1] Diese Seite wurde aus den Metadaten des Plugins erzeugt.

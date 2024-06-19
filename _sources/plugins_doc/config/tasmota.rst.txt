@@ -37,8 +37,7 @@ Anforderungen
 
 
 
- - Minimum SmartHomeNG Version: **1.7.2**
- - Minimum Python Version: **3.6**
+ - Minimum SmartHomeNG Version: **1.9.3**
 
 Konfiguration
 =============
@@ -77,29 +76,26 @@ Zeitabstand in Sekunden in dem die Tasmota Devices Telemetrie Daten senden solle
  - Minimalwert: **10**
  - Maximalwert: **3600**
 
-webif_pagelength
-================
-
-
-Anzahl an Items, die standardmäßig in einer Web Interface Tabelle pro Seite angezeigt werden
-
- - Datentyp: **int**
- - Standardwert: **100**
-
- - Mögliche Werte:
-
-   - **-1**
-   - **25**
-   - **50**
-   - **100**
-
-
 ==============
 Item Attribute
 ==============
 
 
 Das Plugin unterstützt folgende Item Attribute, die in den Dateien im Verzeichnis  ``../items`` verwendet werden:
+
+
+tasmota_admin
+=============
+
+
+
+
+ - Datentyp: **str**
+ - Standardwert: **delete_retained_messages**
+
+ - Mögliche Werte:
+
+   - **delete_retained_messages**
 
 
 tasmota_attr
@@ -118,15 +114,37 @@ tasmota_relay
 
 Nummer des zu schaltenden Relais im Tasmota Device
 
- - Datentyp: **str**
+ - Datentyp: **int**
  - Standardwert: **1**
 
- - Mögliche Werte:
+ - Minimalwert: **1**
+ - Maximalwert: **4**
 
-   - **1**
-   - **2**
-   - **3**
-   - **4**
+tasmota_rf_details
+==================
+
+
+Nummer des auszulösenden RF Keys im Tasmota Device und Aktion bei Empfang als String; bspw: '16=true' - Bei Empfang des Key16, setze Item auf True
+
+ - Datentyp: **str**
+
+
+tasmota_sml_attr
+================
+
+
+Smartmeter Attribut; muss dem Key des Dictionary dem SML Devices entsprechen
+
+ - Datentyp: **str**
+
+
+tasmota_sml_device
+==================
+
+
+Name des Smartmeter (SML Device)
+
+ - Datentyp: **str**
 
 
 tasmota_topic
@@ -142,9 +160,19 @@ tasmota_zb_attr
 ===============
 
 
-Schlüssel der Json-Dict, der vom Zigbee-Device bereitgestellt wird; Key aus dem sub-dict 'data' des tasmota_zb_device
+Schlüssel der Json-Dict, der vom Zigbee-Device bereitgestellt wird; Key aus dem dict des tasmota_zb_device
 
  - Datentyp: **str**
+
+
+tasmota_zb_cluster
+==================
+
+
+Ergänzung des Sendebefehls um entsprechendes Zigbee-Cluster
+
+ - Datentyp: **bool**
+ - Standardwert: **False**
 
 
 tasmota_zb_device
@@ -154,6 +182,15 @@ tasmota_zb_device
 Friendly Name oder Kurzname des Zigbee Devices. ACHTUNG: Wird der Kurzname verwendet und beginnt dieser mit 0x, muss die Schreibweise '0x9CB9' verwendet werden
 
  - Datentyp: **str**
+
+
+tasmota_zb_group
+================
+
+
+Zigbee Control Group: Werte werden an diese Gruppe gesendet. Gruppennachrichten werden nicht empfangen. https://tasmota.github.io/docs/Device-Groups/#zigbee
+
+ - Datentyp: **num**
 
 
 ===============
